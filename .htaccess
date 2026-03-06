@@ -1,0 +1,53 @@
+RewriteEngine On
+
+# ==================================================
+# 1 Redirect index.html → Homepage
+# ==================================================
+RewriteCond %{THE_REQUEST} \s/index\.html [NC]
+RewriteRule ^index\.html$ / [R=301,L]
+
+
+# ==================================================
+# 2 Force HTTPS
+# ==================================================
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+
+# ==================================================
+# 3 CUSTOM CLEAN URL NAMES
+# (Must stay ABOVE html removal)
+# ==================================================
+
+RewriteRule ^life-at-indel/?$ life-at-indel.html [L]
+RewriteRule ^indel-motory/?$ motory.html [L]
+RewriteRule ^showcase/?$ image-gallery.html [L]
+RewriteRule ^kairali-ford/?$ kairali-ford.html [L]
+RewriteRule ^contact-us/?$ contact.html [L]
+RewriteRule ^about-us/?$ about.html [L]
+
+# Brand Pages
+RewriteRule ^indel-honda/?$ honda.html [L]
+RewriteRule ^kairali-toyota/?$ toyota.html [L]
+RewriteRule ^kerala-volvo/?$ volvo.html [L]
+RewriteRule ^indel-yamaha/?$ yamaha.html [L]
+RewriteRule ^indel-suzuki/?$ suzuki.html [L]
+RewriteRule ^indel-wheels/?$ river.html [L]
+RewriteRule ^indel-mobility/?$ mobility.html [L]
+
+
+# ==================================================
+# 4 Redirect OLD .html URLs → Clean URLs
+# Example: about.html → /about
+# ==================================================
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
+RewriteRule ^ %1 [R=301,L]
+
+
+# ==================================================
+# 5 Internally Load .html Files
+# Example: /about → about.html
+# ==================================================
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^([^/]+)/?$ $1.html [L]
