@@ -13713,4 +13713,30 @@ header.main-header .header-sticky.active {
     stroke-linejoin: round;
     flex-shrink: 0;
   }
-  
+.social-float {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 20px;
+}
+.soacial-icon {
+  height: 45px;
+  width: 45px;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 4px;
+  /* box-shadow: 0 2px 8px rgba(0, 0, 0, .15); */
+  transition: transform .25s ease, box-shadow .25s ease, background-color .25s ease;
+  cursor: pointer;
+}
+.soacial-icon-img {
+  height: auto;
+  width: auto;
+  transition: transform .25s ease;
+}
+.facebook-icon {
+  border-radius: 8px;
+  padding: 3px;
+}
