@@ -3533,7 +3533,7 @@ header.main-header .header-sticky.active {
 /* Tablet */
 @media (max-width: 991px) {
 	.collage-5 {
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: 1fr 1fr; 
 		grid-template-rows: auto;
 		height: auto;
 	}
@@ -3616,7 +3616,7 @@ header.main-header .header-sticky.active {
 
 @media (max-width: 575px) {
   .collage-8 { grid-template-columns: 1fr; }
-}
+} 
 /*.about-us-start-section {*/
 /*	padding-top: 0;*/
 /*}*/
