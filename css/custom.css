@@ -3592,7 +3592,31 @@ header.main-header .header-sticky.active {
 .life-at-indel-star-section {
 	padding-bottom: 0 !important;
 }
+.collage-8 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-rows: repeat(3, 240px);
+  gap: 16px;
+}
 
+.collage-8 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+@media (max-width: 991px) {
+  .collage-8 {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+  .collage-8 .gallery-item { grid-column: auto; grid-row: auto; }
+}
+
+@media (max-width: 575px) {
+  .collage-8 { grid-template-columns: 1fr; }
+}
 /*.about-us-start-section {*/
 /*	padding-top: 0;*/
 /*}*/
