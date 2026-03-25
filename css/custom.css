@@ -13653,6 +13653,7 @@ header.main-header .header-sticky.active {
     cursor: default;
     transition: border-color .18s, background .18s, transform .15s;
     box-shadow: 0 1px 4px rgba(10,43,110,.06);
+	cursor: pointer;
   }
 
   .indel-locs__tag:hover {
