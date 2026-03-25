@@ -1689,7 +1689,7 @@ header.main-header .header-sticky.active {
 	object-fit: cover;
 	border-radius: 10px;
 	transition: all 0.6s ease-in-out;
-	object-position: bottom !important;  
+	object-position: bottom !important;   
 }
 
 .our-value-item .course-item-image img {
