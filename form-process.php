@@ -94,8 +94,7 @@ if ($errorMSG == "") {
     $datetime = date("d M Y, h:i A");
 
     //  SEND EMAIL
-    $EmailTo = "janavalsan@mindstory.in";
-    // $EmailTo = "info@indelauto.com";
+    $EmailTo = "info@indelauto.com";
     $subject = "New Contact Enquiry – Indel Automotives";
 
     // HTML EMAIL BODY
