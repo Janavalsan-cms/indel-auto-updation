@@ -545,11 +545,18 @@
                       <!-- Select Brand -->
                       <div class="form-group col-md-12 mb-4">
                         <label>Select Brand:</label>
+                        <!-- Add this inside your <select> tag -->
                         <select
                           name="brand"
                           class="form-control"
                           id="brand"
                           required
+                          oninvalid="
+                            this.setCustomValidity(
+                              'Please select a brand from the list.',
+                            )
+                          "
+                          oninput="this.setCustomValidity('')"
                         >
                           <option value="" disabled selected>
                             Select a Brand
